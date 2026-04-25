@@ -1,0 +1,34 @@
+{
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "io.github.andreasjhagen/music-tagger",
+    "description": "MCP server for identifying and tagging music files via AcoustID fingerprinting and MusicBrainz metadata",
+    "version": "1.0.1",
+    "icons": [
+        {
+            "src": "https://raw.githubusercontent.com/andreasjhagen/Cynosure-MCPs/main/mcp-music-tagger/icon.png",
+            "mimeType": "image/png"
+        }
+    ],
+    "packages": [
+        {
+            "registryType": "npm",
+            "identifier": "@cynosure-mcp/music-tagger",
+            "version": "1.0.1",
+            "transport": {
+                "type": "stdio"
+            },
+            "environmentVariables": [
+                {
+                    "name": "ACOUSTID_API_KEY",
+                    "description": "Free API key from https://acoustid.org/api-key (required for fingerprinting)",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "repository": {
+        "url": "https://github.com/andreasjhagen/Cynosure-MCPs",
+        "source": "github",
+        "subfolder": "mcp-music-tagger"
+    }
+}
