@@ -347,7 +347,14 @@ async function applyTags(
 
 // ── MCP Server ────────────────────────────────────────────────────────────────
 
-const server = new McpServer({ name: 'music-tagger', version: '1.0.0' });
+const server = new McpServer({
+    name: 'music-tagger',
+    version: '1.0.0',
+    title: 'Music Tagger',
+    description: 'Identify and tag music files with accurate metadata sourced from MusicBrainz. Supports title, artist, album, year, track, disc, genres, and cover art.',
+    icons: [{ src: 'https://raw.githubusercontent.com/andreasjhagen/Cynosure-MCPs/main/mcp-music-tagger/icon.png', mimeType: 'image/png' }],
+
+});
 
 // ── Tool: read_tags ──────────────────────────────────────────────────────────
 server.registerTool(
