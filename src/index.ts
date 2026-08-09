@@ -360,6 +360,7 @@ const server = new McpServer({
 server.registerTool(
     'read_tags',
     {
+        annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
         description: 'Read the current embedded tags from a music file or all music files in a folder.',
         inputSchema: {
             path: z.string().describe('Absolute or relative path to a music file or a folder.'),
@@ -384,6 +385,7 @@ server.registerTool(
 server.registerTool(
     'tag_music',
     {
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: true, openWorldHint: true },
         description:
             'Identify music files by audio fingerprint (AcoustID + Chromaprint) and write accurate tags ' +
             '(title, artist, album, year, track, disc, genres, cover art) sourced from MusicBrainz. ' +
