@@ -352,7 +352,7 @@ const server = new McpServer({
     version: '1.0.0',
     title: 'Music Tagger',
     description: 'Identify and tag music files with accurate metadata sourced from MusicBrainz. Supports title, artist, album, year, track, disc, genres, and cover art.',
-    icons: [{ src: 'https://raw.githubusercontent.com/andreasjhagen/Cynosure-MCPs/main/mcp-music-tagger/icon.png', mimeType: 'image/png' }],
+    icons: [{ src: 'https://unpkg.com/@cynosure-mcp/music-tagger@1.0.4/icon.png', mimeType: 'image/png' }],
 
 });
 

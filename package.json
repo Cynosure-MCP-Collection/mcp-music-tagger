@@ -1,7 +1,7 @@
 {
   "name": "@cynosure-mcp/music-tagger",
   "mcpName": "io.github.andreasjhagen/music-tagger",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "MCP server for identifying and tagging music files via AcoustID fingerprinting and MusicBrainz metadata",
   "type": "module",
   "main": "dist/index.js",
@@ -28,7 +28,8 @@
   },
   "files": [
     "dist",
-    "server.json"
+    "server.json",
+    "icon.png"
   ],
   "publishConfig": {
     "access": "public"
