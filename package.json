@@ -44,5 +44,13 @@
     "musicbrainz",
     "fingerprint"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cynosure-MCP-Collection/mcp-music-tagger.git"
+  },
+  "homepage": "https://github.com/Cynosure-MCP-Collection/mcp-music-tagger#readme",
+  "bugs": {
+    "url": "https://github.com/Cynosure-MCP-Collection/mcp-music-tagger/issues"
+  }
 }
