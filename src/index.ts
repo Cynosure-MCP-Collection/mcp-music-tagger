@@ -7,10 +7,10 @@ import { promisify } from 'node:util';
 import * as path from 'node:path';
 import { promises as fs } from 'node:fs';
 import { File as TagFile, ByteVector, Picture, PictureType } from 'node-taglib-sharp';
+import { fingerprintFromSamples } from './chromaprint.js';
 import ffmpegStatic from 'ffmpeg-static';
 // @ts-expect-error no type declarations
 import ffprobeStatic from 'ffprobe-static';
-import { fingerprintFromSamples } from 'rusty-chromaprint-wasm';
 
 const execAsync = promisify(exec);
 
@@ -124,8 +124,8 @@ async function fingerprintFile(filePath: string): Promise<{ duration: number; fi
         getAudioDuration(filePath),
         decodeAudioPCM(filePath),
     ]);
-    const result = fingerprintFromSamples(44100, 1, samples);
-    return { duration, fingerprint: result.compressed };
+    const fingerprint = await fingerprintFromSamples(44100, 1, samples);
+    return { duration, fingerprint };
 }
 
 // ── AcoustID ──────────────────────────────────────────────────────────────────
@@ -349,10 +349,10 @@ async function applyTags(
 
 const server = new McpServer({
     name: 'music-tagger',
-    version: '1.0.0',
+    version: '1.0.5',
     title: 'Music Tagger',
     description: 'Identify and tag music files with accurate metadata sourced from MusicBrainz. Supports title, artist, album, year, track, disc, genres, and cover art.',
-    icons: [{ src: 'https://unpkg.com/@cynosure-mcp/music-tagger@1.0.4/icon.png', mimeType: 'image/png' }],
+    icons: [{ src: 'https://unpkg.com/@cynosure-mcp/music-tagger@1.0.5/icon.png', mimeType: 'image/png' }],
 
 });
 

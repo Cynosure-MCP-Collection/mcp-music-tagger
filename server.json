@@ -2,10 +2,10 @@
     "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
     "name": "io.github.andreasjhagen/music-tagger",
   "description": "Identify and tag music with AcoustID fingerprints and MusicBrainz metadata",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "icons": [
         {
-            "src": "https://unpkg.com/@cynosure-mcp/music-tagger@1.0.4/icon.png",
+            "src": "https://unpkg.com/@cynosure-mcp/music-tagger@1.0.5/icon.png",
             "mimeType": "image/png"
         }
     ],
@@ -13,7 +13,7 @@
         {
             "registryType": "npm",
             "identifier": "@cynosure-mcp/music-tagger",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "transport": {
                 "type": "stdio"
             },
